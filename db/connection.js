@@ -1,14 +1,8 @@
 const mongoose = require("mongoose");
 
-const MONGO_URI = `mongodb://127.0.0.1:27017/crud-app1`;
+const MONGO_URI = process.env.MONGO_URL_DEV;
 
-mongoose.connect(
-  MONGO_URI
-  //     {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  // }
-);
+mongoose.connect(MONGO_URI);
 
 const db = mongoose.connection;
 

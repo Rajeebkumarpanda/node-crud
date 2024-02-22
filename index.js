@@ -1,8 +1,11 @@
+require('dotenv').config()
 const express = require('express')
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 const app = express()
 const db = require("./db/connection")
 const personRouter = require("./routes/person")
+
+console.log(process.env.PORT)
 
 //middleware 
 app.use(express.json())
