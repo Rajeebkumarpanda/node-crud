@@ -4,7 +4,7 @@ const {
   handleCreateData,
   handleUpdateData,
   handleDeleteData,
-} = require("../controllers/Person");
+} = require("../controllers/Person.js");
 const router = express.Router();
 
 router.get("/", handleGetData);
